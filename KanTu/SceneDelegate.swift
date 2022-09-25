@@ -11,7 +11,40 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+    ///定义一个静态的计算属性
+    ///返回SceneDelegate对象实例
+    open class var shared:SceneDelegate{
+        get{
+            let secene  = UIApplication.shared.connectedScenes.first
+            return secene?.delegate as! SceneDelegate
+        }
+    }
+    
+    func next (){
+        print("AppDelegate next")
+        ///真实项目中
+        ///可能还有引导界面
+    
+        ///TODO 跳转到登录界面
+        toNextPage("Login")
+    }
 
+    func toNextPage(_ sb:String){
+        ///获取main.storyboard
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        
+        ///实例化控制器
+        let controller = storyBoard.instantiateViewController(withIdentifier: sb)
+        
+        //这里是替换原来的根控制器
+        //目的是我们不希望用户在的登录界面还能返回到启动界面
+        window?.rootViewController = controller
+        
+    }
+    
+    
+    
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
