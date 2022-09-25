@@ -47,7 +47,7 @@ class LoginController: UIViewController {
         if Constant.PHONE == phone && Constant.PASSWORD==password {
             PreferenceUtil.setLogin(true)
             hintView.text = "登录成功"
-            SceneDelegate.shared.toNextPage("Home")
+            SceneDelegate.shared.toNextPage("HomeNavigation")
         }else{
             hintView.text = "手机号或者密码不正确"
         }

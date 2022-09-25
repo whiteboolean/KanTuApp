@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if PreferenceUtil.isLogin() {
             toNextPage("HomeNavigation")
         }else{
-            toNextPage("Login")
+            toNextPage("LoginNavigationController")
         }
         ///TODO 跳转到登录界面
         ///toNextPage("Login")

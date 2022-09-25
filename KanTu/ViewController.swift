@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     @IBAction func logoutClick(_ sender: UIButton) {
         PreferenceUtil.setLogin(false)
-        SceneDelegate.shared.toNextPage("Login")
+        SceneDelegate.shared.toNextPage("LoginNavigationController")
     }
     
     override func viewDidLoad() {
