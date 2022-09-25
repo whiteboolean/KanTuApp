@@ -27,7 +27,7 @@ class ImageCell: UITableViewCell {
         uiImageView.image  = UIImage(named: data)
     }
     
-    
+
     
     
 }

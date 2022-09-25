@@ -48,6 +48,13 @@ extension ViewController :UITableViewDelegate,UITableViewDataSource{
         return dataArray.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = dataArray[indexPath.row]
+        let imageDetailController = storyboard?.instantiateViewController(withIdentifier: "ImageDetail") as! ImageDetailController
+        imageDetailController.id = data
+        navigationController?.pushViewController(imageDetailController, animated: true)
+        
+    }
     
     
 }

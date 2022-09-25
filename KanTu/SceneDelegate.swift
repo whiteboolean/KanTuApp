@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         ///可能还有引导界面
     
         if PreferenceUtil.isLogin() {
-            toNextPage("Home")
+            toNextPage("HomeNavigation")
         }else{
             toNextPage("Login")
         }

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--首页-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="Home" id="BYZ-38-t0r" customClass="ViewController" customModule="KanTu" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cRp-hg-pkO">
-                                <rect key="frame" x="16" y="63" width="358" height="731"/>
+                                <rect key="frame" x="16" y="107" width="358" height="687"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5o-OV-MnS">
                                         <rect key="frame" x="0.0" y="0.0" width="358" height="45"/>
@@ -31,7 +31,7 @@
                                         </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="adm-Bx-Twf">
-                                        <rect key="frame" x="0.0" y="61" width="358" height="670"/>
+                                        <rect key="frame" x="0.0" y="61" width="358" height="626"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="180" id="Qnq-7E-1Ol" customClass="ImageCell" customModule="KanTu" customModuleProvider="target">
@@ -77,13 +77,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cRp-hg-pkO" secondAttribute="bottom" constant="16" id="wE2-2l-LQz"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="首页" id="jcr-Y3-k43"/>
                     <connections>
                         <outlet property="tabView" destination="adm-Bx-Twf" id="Hqd-XO-Sqn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-278.46153846153845" y="-44.075829383886251"/>
+            <point key="canvasLocation" x="650.76923076923072" y="-44.075829383886251"/>
         </scene>
         <!--Image Detail Controller-->
         <scene sceneID="rK6-I2-l0Q">
@@ -112,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zbX-Li-a56" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="548" y="-44"/>
+            <point key="canvasLocation" x="1476.9230769230769" y="-44.075829383886251"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="QlP-mb-Wlp">
@@ -248,6 +249,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Whi-m8-PQ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1025" y="-44"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MZf-I8-aKR">
+            <objects>
+                <navigationController storyboardIdentifier="HomeNavigation" automaticallyAdjustsScrollViewInsets="NO" id="TXp-RL-fCK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6pA-xu-NjO">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Eyl-Na-14a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mc0-xK-8Nx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-278.46153846153845" y="-44.075829383886251"/>
         </scene>
     </scenes>
     <resources>

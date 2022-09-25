@@ -17,7 +17,8 @@ class ImageDetailController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "图片详情"
+        uiImage.image = UIImage(named: id)
         // Do any additional setup after loading the view.
     }
     
