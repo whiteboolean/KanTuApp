@@ -25,8 +25,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         ///真实项目中
         ///可能还有引导界面
     
+        if PreferenceUtil.isLogin() {
+            toNextPage("Home")
+        }else{
+            toNextPage("Login")
+        }
         ///TODO 跳转到登录界面
-        toNextPage("Login")
+        ///toNextPage("Login")
     }
 
     func toNextPage(_ sb:String){

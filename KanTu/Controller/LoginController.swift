@@ -15,7 +15,6 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
 
@@ -46,6 +45,7 @@ class LoginController: UIViewController {
         }
         
         if Constant.PHONE == phone && Constant.PASSWORD==password {
+            PreferenceUtil.setLogin(true)
             hintView.text = "登录成功"
             SceneDelegate.shared.toNextPage("Home")
         }else{
